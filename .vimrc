@@ -48,6 +48,8 @@ set smartindent " Intellegently dedent / indent new lines based on rules.
 set hidden " keep buffers around when not in view.
 set visualbell " Don't beep, do visual bell, which is disabled in my gvimrc
 set laststatus=2 " always show a status line.
+set relativenumber
+set undofile
 set history=1000 " cmd-mode history, and search history
 set nobackup " We have vcs, we don't need backups.
 set nowritebackup " We have vcs, we don't need backups.
@@ -60,6 +62,10 @@ set incsearch " live incremental searching
 set showmatch " live match highlighting
 set hlsearch " highlight matches
 set gdefault " use the `g` flag by default.
+
+" Match bracket pairs
+nnoremap <tab> %
+vnoremap <tab> %
 
 set virtualedit+=block
 
