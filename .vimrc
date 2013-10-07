@@ -13,6 +13,8 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 
 filetype plugin indent on
 syntax on
@@ -20,7 +22,6 @@ syntax on
 let g:ctrlp_map = '<c-t>'
 
 " General
-set number
 set list
 set listchars=tab:▸\ ,eol:¬ " show fancy characters for tabstops, and \n's
 
@@ -49,7 +50,18 @@ set hidden " keep buffers around when not in view.
 set visualbell " Don't beep, do visual bell, which is disabled in my gvimrc
 set laststatus=2 " always show a status line.
 set relativenumber
+
+set undodir=~/.vim/undodir
 set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer load
+
+" Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
+nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
 set history=1000 " cmd-mode history, and search history
 set nobackup " We have vcs, we don't need backups.
 set nowritebackup " We have vcs, we don't need backups.
@@ -134,3 +146,7 @@ vnoremap / /\v
 
 " Clear match highlighting
 noremap <leader><space> :noh<cr>:call clearmatches()<cr>
+
+" highlight over 80 columns, length
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
