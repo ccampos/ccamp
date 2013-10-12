@@ -133,7 +133,7 @@ noremap <leader>v <C-w>v
 
 " bindings for easy split nav
 nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
+nnoremap <C-i> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
@@ -158,3 +158,10 @@ noremap <leader><space> :noh<cr>:call clearmatches()<cr>
 " highlight over 80 columns, length
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=098 guibg=#cccccc
+
+" break line in normal mode
+:nnoremap <NL> i<CR><ESC>
+
+" Macros
+let @c="Iconsole.log(jff;i)jf"
+let @b="F xv$dojfpA "
