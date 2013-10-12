@@ -164,4 +164,7 @@ highlight ColorColumn ctermbg=098 guibg=#cccccc
 
 " Macros
 let @c="Iconsole.log(jff;i)jf"
-let @b="F xv$dojfpA "
+let @b="F v$dojfpA "
+let @t="ojfddo// "
+let @r="ojfddo"
+let @d="hxxa"
