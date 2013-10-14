@@ -157,7 +157,7 @@ noremap <leader><space> :noh<cr>:call clearmatches()<cr>
 
 " highlight over 80 columns, length
 let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=098 guibg=#cccccc
+highlight ColorColumn ctermbg=098 guibg=#33322E
 
 " break line in normal mode
 :nnoremap <NL> i<CR><ESC>
