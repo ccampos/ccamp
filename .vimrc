@@ -168,20 +168,12 @@ set textwidth=80
 " Macros
 let @c="Iconsole.log(jff;i)jf"
 let @b="F v$hdojfpA "
-<<<<<<< HEAD
 let @u="ojf0d$o# "
-=======
-let @u="ojfo# "
-let @r="ojfojfk0v$hdj$Ijflv$hda"
->>>>>>> dc5d32e904f5ad141a82728b80ec599d0c275a13
 let @d="hxxa"
 let @m="f{I/* jff{%$a */jf"
 
 " Spell autocorrect
 source ~/autocorrect.vim
-<<<<<<< HEAD
 
 " Set Spell
 set spell
-=======
->>>>>>> dc5d32e904f5ad141a82728b80ec599d0c275a13
