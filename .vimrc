@@ -159,13 +159,21 @@ noremap <leader><space> :noh<cr>:call clearmatches()<cr>
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=098 guibg=#33322E
 
+" set textwidth
+set textwidth=80
+
 " break line in normal mode
 :nnoremap <NL> i<CR><ESC>
 
 " Macros
 let @c="Iconsole.log(jff;i)jf"
 let @b="F v$hdojfpA "
-let @t="ojfojfk0v$hdjA "
-let @r="ojfojfk0v$hdj$Ijflv$hda"
+let @u="ojf0d$o# "
 let @d="hxxa"
-let @m="f{I/* jff{%a */jf"
+let @m="f{I/* jff{%$a */jf"
+
+" Spell autocorrect
+source ~/autocorrect.vim
+
+" Set Spell
+set spell
