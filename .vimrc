@@ -1,7 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -10,11 +10,13 @@ Bundle 'gmarik/vundle'
 
 " MY BUNDALZ
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
+Bundle 'terryma/vim-multiple-cursors'
 
 filetype plugin indent on
 syntax on
@@ -171,9 +173,10 @@ let @b="F v$hdojfpA "
 let @u="ojf0d$o# "
 let @d="hxxa"
 let @m="f{I/* jff{%$a */jf"
-
-" Spell autocorrect
-source ~/autocorrect.vim
+    " translateText
+let @t="0wf:laDL.translateText('')\ehi"
+    " camelCase 4 words
+let @l="0w~f\"F l~F xF l~F xF l~F xF\"l~"
 
 " Set Spell
 set spell
