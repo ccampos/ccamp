@@ -8,7 +8,7 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-" MY BUNDALZ
+" MY BUNDLES
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
@@ -17,6 +17,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'rking/ag.vim'
 
 filetype plugin indent on
 syntax on
@@ -30,6 +31,9 @@ set background=dark
 colorscheme solarized
 
 let g:ctrlp_map = '<c-t>'
+
+" The Silver Searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " General
 set list
