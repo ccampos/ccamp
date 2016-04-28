@@ -10,7 +10,7 @@ Bundle 'gmarik/vundle'
 
 " MY BUNDLES
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'altercation/vim-colors-solarized'
@@ -82,12 +82,12 @@ set nowritebackup " We have vcs, we don't need backups.
 set noswapfile " They're just annoying. Who likes them?
 
 " Make search more sane
-set ignorecase " case insensitive search
-set smartcase " If there are uppercase letters, become case-sensitive.
-set incsearch " live incremental searching
+" set ignorecase " case insensitive search
+" set smartcase " If there are uppercase letters, become case-sensitive.
+" set incsearch " live incremental searching
 set showmatch " live match highlighting
 set hlsearch " highlight matches
-set gdefault " use the `g` flag by default.
+" set gdefault " use the `g` flag by default.
 
 " Match bracket pairs
 nnoremap <tab> %
@@ -155,18 +155,19 @@ nnoremap k gk
 nnoremap <leader><leader> <c-^>
 
 " Use sane regex's when searching
-nnoremap / /\v
-vnoremap / /\v
+" nnoremap / /\v
+" vnoremap / /\v
 
 " Clear match highlighting
 noremap <leader><space> :noh<cr>:call clearmatches()<cr>
 
 " highlight over 80 columns, length
 let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=098 guibg=#33322E
+highlight ColorColumn ctermbg=233 guibg=#33322E
+highlight Normal ctermbg=Black guibg=#33322E
 
 " set textwidth
-set textwidth=80
+" set textwidth=80
 
 " break line in normal mode
 :nnoremap <NL> i<CR><ESC>
