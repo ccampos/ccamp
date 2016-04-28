@@ -6,3 +6,4 @@ alias gs='git status'¬
 alias gpul='git pull'¬
 alias gpus='git push'¬
 alias gl='git log'
+alias e='exit'
